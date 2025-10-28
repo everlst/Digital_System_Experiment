@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Oct 28 14:51:18 2025
+# Process ID: 10084
+# Current directory: Y:/Code/github/Digital_System_Experiment/lab12/prj/lab12/lab12.runs/impl_1
+# Command line: vivado.exe -log decoder_7seg.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source decoder_7seg.tcl -notrace
+# Log file: Y:/Code/github/Digital_System_Experiment/lab12/prj/lab12/lab12.runs/impl_1/decoder_7seg.vdi
+# Journal file: Y:/Code/github/Digital_System_Experiment/lab12/prj/lab12/lab12.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source decoder_7seg.tcl -notrace

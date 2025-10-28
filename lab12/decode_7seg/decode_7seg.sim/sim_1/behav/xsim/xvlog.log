@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/19695/Desktop/digi_sys_ope/decode_7seg/decode_7seg.srcs/sources_1/new/decoder_7seg_pro.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_7seg_pro
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'seg' is not allowed [C:/Users/19695/Desktop/digi_sys_ope/decode_7seg/decode_7seg.srcs/sources_1/new/decoder_7seg_pro.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/19695/Desktop/digi_sys_ope/decode_7seg/decode_7seg.srcs/sim_1/new/sim1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/19695/Desktop/digi_sys_ope/decode_7seg/decode_7seg.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

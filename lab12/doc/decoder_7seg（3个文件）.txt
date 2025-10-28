@@ -1,0 +1,86 @@
+//数码管显示0~9设计文件
+
+module decoder_7seg (    
+    input   [3:0] ain,
+    output [7:0] seg,
+    output [5:0] dig
+    );
+    reg[7:0] seg;
+    assign dig=6'b011111;
+always@(ain)       
+        case(ain)
+        4'b0000: seg = 8'b11111100;
+        4'b0001: seg = 8'b01100000;
+        4'b0010: seg = 8'b11011010;
+        4'b0011: seg = 8'b11110010;
+        4'b0100: seg = 8'b01100110;
+        4'b0101: seg = 8'b10110110;
+        4'b0110: seg = 8'b00111110;
+        4'b0111: seg = 8'b11100000;
+        4'b1000: seg = 8'b11111110;
+        4'b1001: seg = 8'b11100110;
+          default: seg = 8'b00000000;
+        endcase
+ endmodule
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//数码管显示0~9约束文件
+
+set_property PACKAGE_PIN R6 [get_ports {ain[3]}]
+set_property PACKAGE_PIN T7 [get_ports {ain[2]}]
+set_property PACKAGE_PIN T8 [get_ports {ain[1]}]
+set_property PACKAGE_PIN T9 [get_ports {ain[0]}]
+
+set_property PACKAGE_PIN N11 [get_ports {dig[5]}]
+set_property PACKAGE_PIN N14 [get_ports {dig[4]}]
+set_property PACKAGE_PIN N13 [get_ports {dig[3]}]
+set_property PACKAGE_PIN M12 [get_ports {dig[2]}]
+set_property PACKAGE_PIN H13 [get_ports {dig[1]}]
+set_property PACKAGE_PIN G12 [get_ports {dig[0]}]
+
+set_property PACKAGE_PIN P11 [get_ports {seg[7]}]
+set_property PACKAGE_PIN N12 [get_ports {seg[6]}]
+set_property PACKAGE_PIN L14 [get_ports {seg[5]}]
+set_property PACKAGE_PIN K13 [get_ports {seg[4]}]
+set_property PACKAGE_PIN K12 [get_ports {seg[3]}]
+set_property PACKAGE_PIN P13 [get_ports {seg[2]}]
+set_property PACKAGE_PIN M14 [get_ports {seg[1]}]
+set_property PACKAGE_PIN L13 [get_ports {seg[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ain[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ain[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ain[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ain[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {dig[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dig[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dig[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dig[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dig[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dig[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[0]}]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//数码管显示0~9和0~F仿真文件
+
+module sim_1;
+    reg  [3:0] ain;
+    wire [7:0] seg;
+    wire [5:0] dig;
+    
+    decoder_7seg  uut(ain,seg,dig);
+    initial
+       begin 
+        ain = 0;
+       end    
+    always #10 ain = ain+1;
+endmodule
+
+
